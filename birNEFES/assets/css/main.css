@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1358px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  position: relative;
+  padding: 0 2rem;
+}
+nav .navBar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  position: sticky;
+  color: #234b55;
+  padding-top: 2rem;
+}
+nav .navBar .logo a {
+  font-family: "Pacifico", cursive;
+  font-family: "Prompt", sans-serif;
+  color: #234b55;
+}
+nav .navBar img {
+  width: 97px;
+  height: 57px;
+}
+nav .navbar-menu a {
+  font-size: 25px;
+  color: #234b55;
+}
+nav .navbar-menu li {
+  display: inline-block;
+  margin: 0 20px;
+}
+nav .btn {
+  background-color: #234b55;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  padding: 1rem 1rem;
+  text-align: center;
+}
+
+.navbar_icon {
+  display: none;
+}
+
+.navBar_js {
+  width: 100%;
+  overflow: visible;
+}
+
+.responsive {
+  display: none;
+}
+
+.btn_responsive {
+  background-color: #234b55;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  padding: 1rem 1rem;
+  text-align: center;
+}
+
+.responsive_show {
+  overflow: hidden;
+  color: #234b55;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  top: 200px;
+  font-size: 20px;
+  left: 39%;
+}
+
+a {
+  color: #234b55;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding-top: 300px;
+  }
+  .navbar_icon {
+    display: block;
+    cursor: pointer;
+    font-size: 40px;
+    color: #234b55;
+  }
+  .navbar-menu,
+  .btn {
+    display: none;
+  }
+}
+main .section_one {
+  background-image: url("/assets/img/pexels-karolina-grabowska-4021801.jpg");
+  width: 100%;
+  background-color: aqua;
+  height: 100vh;
+  opacity: 0.3;
+}
+main .section_one .section_one_about {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 50%;
+  left: 13%;
+  font-size: 1.8rem;
+  font-weight: bold;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,22 @@
+main{
+.section_one{
+   background-image: url("/assets/img/pexels-karolina-grabowska-4021801.jpg");
+   width: 100%;
+   background-color: aqua;
+   height: 100vh;
+   opacity: 0.3;
+.section_one_about{
+    display: grid;
+    place-items: center;
+position: absolute;
+top: 50%;
+left: 13%;
+font-size: 1.8rem;
+font-weight: bold;
+  
+}
+
+}
+
+
+}
