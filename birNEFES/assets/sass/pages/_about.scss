@@ -1,0 +1,50 @@
+
+.section_one_about {
+
+    background-image: url("/assets/img/pexels-pixabay-461049.jpg");
+    height: 100vh;
+    opacity: 0.3;
+
+    .section_one_abouts {
+        display: grid;
+        place-items: center;
+        position: absolute;
+        top: 50%;
+        left: 7%;
+        font-size: 3.8rem;
+        font-weight: bold;
+        color: white;
+    }
+
+}
+
+
+.section_two{
+    margin: 100px  0 ;
+    height: 658px;
+    background-image: url("https://preview.colorlib.com/theme/remedic/images/bg_3.jpg.webp");
+    h1{
+        font-size: 50px;
+        color:  rgb(96, 160, 205);
+    }
+.abouts{
+
+    div {
+        width: 500px;
+        height: 150px;
+        background-color: rgba(255, 255, 255, 0.8);
+        transition: width 2s;
+        border: 1px solid rgb(96, 160, 205);
+        text-align: center;
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        color:  rgb(96, 160, 205);
+      }
+      
+      div:hover {
+        width: 700px;
+      }
+}
+
+}

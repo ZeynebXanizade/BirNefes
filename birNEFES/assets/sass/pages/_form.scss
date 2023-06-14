@@ -1,0 +1,18 @@
+.section_one_form {
+
+    background-image: url("/assets/img/pexels-pixabay-461049.jpg");
+    height: 100vh;
+    opacity: 0.3;
+
+    .section_one_form_about {
+        display: grid;
+        place-items: center;
+        position: absolute;
+        top: 50%;
+        left: 7%;
+        font-size: 3.8rem;
+        font-weight: bold;
+        color: white;
+    }
+
+}
