@@ -1,28 +1,27 @@
 
 .section_one_about {
 
-    background-image: url("/assets/img/pexels-pixabay-461049.jpg");
+    background-image: url("https://preview.colorlib.com/theme/remedic/images/bg_3.jpg.webp");
     height: 100vh;
-    opacity: 0.3;
 
     .section_one_abouts {
         display: grid;
         place-items: center;
-        position: absolute;
-        top: 50%;
-        left: 7%;
-        font-size: 3.8rem;
+        padding-top: 20%;
+        font-size: 6rem;
         font-weight: bold;
-        color: white;
+        color:rgb(3 197 236);
     }
 
 }
 
 
+
+
+//
 .section_two{
     margin: 100px  0 ;
     height: 658px;
-    background-image: url("https://preview.colorlib.com/theme/remedic/images/bg_3.jpg.webp");
     h1{
         font-size: 50px;
         color:  rgb(96, 160, 205);

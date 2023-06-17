@@ -6,8 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>bir NEFES</title>
-  <!--css link-->
-  <link rel="stylesheet" href="./assets/css/main.css">
   <!--icon link-->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -19,27 +17,32 @@
     <!--bootstrap link-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <!--css link-->
+      <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 
 <body>
   <!--navbar start-->
   <nav>
-    <div class="navBar container">
+    <div class="navBar ">
       <div class="logo">
         <label for="" class="agency"><img src="./assets/img/birnefes-logo.jpeg" alt="">
-          <a href="">BIR NEFES</a>
+          <a class="logo_name" href="">BIR NƏFƏS</a>
 
         </label>
       </div>
       <ul class="navbar-menu">
         <li><a href="./home.html">HOME</a></li>
-        <li><a href="./about.html">ABOUT</a></li>
-        <li><a href="./services.html">SERVICES</a></li>
-        <li><a href="./form.html">FORM</a></li>
-        <li><a href="./blog.html">BLOG</a></li>
+        <li class="dropdown"><a  href="./about.html">ABOUT</a>
+          <div class="dropdown-content">
+            <a href="./blog.html">BLOG</a>
+            <a href="./services.html">SERVICES</a>
+            <a href="./form.html">FORM</a>
+            </div> 
+        </li>
         <li><a href="./contact.html">CONTACT</a></li>
       </ul>
-      <div class="btn">GET STARTED</div>
+      <div class="btn-navbar"><a href="./login.html">GET STARTED</a></div>
       <div class="navbar_icon"><i class="fa-solid fa-bars"></i></div>
     </div>
     <div class="responsive">
@@ -51,7 +54,7 @@
         <li><a href="./blog.html">BLOG</a></li>
         <li><a href="./contact.html">CONTACT</a></li>
       </ul>
-      <div class="btn_responsive">GET STARTED</div>
+      <div class="btn_responsive"><a href="./login.html">GET STARTED</a></div>
     </div>
   </nav>
   <!--navbar end-->
@@ -60,10 +63,10 @@
     <!--section start-->
     <section class="section_one_blog">
       <div class="section_one_blog_about">
-        <h1>BLOG</h1>
+        <h1 >BLOG</h1>
       </div>
     </section>
-    <section>
+    <section class="accordion">
       <div class="container">
         <!-- For demo purpose -->
         <div class="row py-5">
@@ -118,45 +121,42 @@
   </main>
   <!--main end-->
   <!--footer start-->
-  <footer id="footer">
-    <div class="container">
-      <div class="footer">
-        <div class="footer-left">
-          <p>
+  <footer>
+    <div class="container2">
 
-            Let's help people together and let everyone be healthy
-          </p>
-          <div class="mail">
-            <img src="./assets/images/Vector (5).svg" alt="" />
-            <span>Birnefes@gmail.com</span>
+      <div class="section_Personal">
+
+
+        <div class="fourdiv">
+
+          <div class="agep11new">
+            <H1>BİR NƏFƏS</H1>
           </div>
-          <div class="telephone">
-            <img src="./assets/images/Vector (6).svg" alt="" />
-            <span>+994 797 17 11</span>
+          <div class="menudiv">
+            <p class="menupp">HOME</p>
+            <p class="aboppnew">About</p>
+            <p class="aboppnew">Services</p>
+            <p class="aboppnew">Blog</p>
+            <p class="aboppnew">Contact</p>
+            <p class="aboppnew">Form</p>
           </div>
-          <div class="send-message-button">
-            <img src="assets/images/Vector (7).svg" alt="" />
-            <span><a href="./contact.html">Send message</a></span>
+          <div class="menudiv">
+            <p class="menupp">SERVICE</p>
+            <p class="aboppnew"><i class="fa-regular fa-envelope"></i>birnefessgmail.com</p>
+            <p class="aboppnew"><i class="fa-solid fa-tty"></i>+252251762</p>
+            <p class="aboppnew"><i class="fa-solid fa-phone"></i>+994707971711</p>
+            <p class="aboppnew"><i class="fa-solid fa-location-dot"></i>Azerbaycan,Astara</p>
           </div>
+          <div class="logo_footer"><i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+          </div>
+
         </div>
-        <div class="footer-right container">
-          <div class="home container">
-            <p class="tittle"><a href="./home.html">Home</a></p>
-            <p><a href="./about.html">About</a></p>
-            <p><a href="./contact.html">Contact</a></p>
-            <p><a href="./services.html">Services</a></p>
-            <p><a href="./form.html">Form</a></p>
-            <p><a href="./blog.html">Blog</a></p>
-          </div>
-          <div class="help container">
-            <p class="tittle"><a href="./services.html">Help</a></p>
-            <p>FAQ</p>
-            <p>Delivery</p>
-            <p>Cancellation of the order</p>
-            <p>Don't go back</p>
-          </div>
-        </div>
+
+
       </div>
+
     </div>
   </footer>
   <!--footer end-->

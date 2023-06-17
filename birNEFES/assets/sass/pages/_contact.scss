@@ -8,7 +8,6 @@
 .section_one_contact {
   background-image: url(/assets/img/pexels-fauxels-3184418.jpg);
   height: 100vh;
-  opacity: 0.3;
 
   .section_one_contact_about {
     display: grid;
@@ -23,7 +22,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .section_one_about {
+  .section_one_contact_about {
 
     left: 15% !important;
     font-size: 3.2rem !important;

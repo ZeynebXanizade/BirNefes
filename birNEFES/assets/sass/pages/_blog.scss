@@ -2,21 +2,21 @@
 
     background-image: url("/assets/img/pexels-picography-4458.jpg");
     height: 100vh;
-    opacity: 0.3;
     .section_one_blog_about {
         display: grid;
         place-items: center;
-        position: absolute;
-        top: 50%;
-        left: 35%;
-        font-size: 6rem;
+      padding-top: 200px;
+     
         font-weight: bold;
-     color:  rgb(96, 160, 205);
+    color:white;
+     h1{
+      font-size: 11rem;
+     }
     }
 
 }
 
-  section {
+  .accordion {
     background: #654ea3;
     background: -webkit-linear-gradient(to left, #654ea3, #eaafc8);
     background: linear-gradient(to left, #654ea3, #eaafc8);

@@ -21,22 +21,25 @@
 <body>
     <!--navbar start-->
     <nav>
-        <div class="navBar container">
+        <div class="navBar ">
             <div class="logo">
                 <label for="" class="agency"><img src="./assets/img/birnefes-logo.jpeg" alt="">
-                    <a href="">BIR NEFES</a>
+                    <a class="logo_name" href="">BIR NƏFƏS</a>
 
                 </label>
             </div>
             <ul class="navbar-menu">
                 <li><a href="./home.html">HOME</a></li>
-                <li><a href="./about.html">ABOUT</a></li>
-                <li><a href="./services.html">SERVICES</a></li>
-                <li><a href="./form.html">FORM</a></li>
-                <li><a href="./blog.html">BLOG</a></li>
+                <li class="dropdown"><a  href="./about.html">ABOUT</a>
+                  <div class="dropdown-content">
+                    <a href="./blog.html">BLOG</a>
+                    <a href="./services.html">SERVICES</a>
+                    <a href="./form.html">FORM</a>
+                    </div> 
+                </li>
                 <li><a href="./contact.html">CONTACT</a></li>
-            </ul>
-            <div class="btn">GET STARTED</div>
+              </ul>
+              <div class="btn-navbar"><a href="./login.html">GET STARTED</a></div>
             <div class="navbar_icon"><i class="fa-solid fa-bars"></i></div>
         </div>
         <div class="responsive">
@@ -48,7 +51,7 @@
                 <li><a href="./blog.html">BLOG</a></li>
                 <li><a href="./contact.html">CONTACT</a></li>
             </ul>
-            <div class="btn_responsive">GET STARTED</div>
+            <div class="btn_responsive"><a href="./login.html">GET STARTED</a></div>
         </div>
     </nav>
     <!--navbar end-->
@@ -575,50 +578,62 @@
             </div>
         </section>
         <!--section end-->
+           <!-- map section start-->
+        <section id="map">
+            <div class="row container">
+              <div class="col-lg-12">
+                <div class="map">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d732221.1271833086!2d47.41953972082367!3d40.57875198227517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307cd91aa21ddf%3A0xe6c9526b3e83cd08!2sAzerbaijan!5e0!3m2!1sen!2sus!4v1686808930017!5m2!1sen!2sus"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+          <!-- map section end-->
     </main>
     <!--main end-->
     <!--footer start-->
-    <footer id="footer">
-        <div class="container">
-            <div class="footer">
-                <div class="footer-left">
-                    <p>
-
-                        Let's help people together and let everyone be healthy
-                    </p>
-                    <div class="mail">
-                        <img src="./assets/images/Vector (5).svg" alt="" />
-                        <span>Birnefes@gmail.com</span>
-                    </div>
-                    <div class="telephone">
-                        <img src="./assets/images/Vector (6).svg" alt="" />
-                        <span>+994 797 17 11</span>
-                    </div>
-                    <div class="send-message-button">
-                        <img src="assets/images/Vector (7).svg" alt="" />
-                        <span><a href="./contact.html">Send message</a></span>
-                    </div>
-                </div>
-                <div class="footer-right container">
-                    <div class="home container">
-                      <p class="tittle"><a href="./home.html">Home</a></p>
-                      <p><a href="./about.html">About</a></p>
-                      <p><a href="./contact.html">Contact</a></p>
-                      <p><a href="./services.html">Services</a></p>
-                      <p><a href="./form.html">Form</a></p>
-                      <p><a href="./blog.html">Blog</a></p>
-                    </div>
-                    <div class="help container">
-                      <p class="tittle"><a href="./services.html">Help</a></p>
-                      <p>FAQ</p>
-                      <p>Delivery</p>
-                      <p>Cancellation of the order</p>
-                      <p>Don't go back</p>
-                    </div>
-                  </div>
+    <footer>
+        <div class="container2">
+    
+          <div class="section_Personal">
+    
+    
+            <div class="fourdiv">
+    
+              <div class="agep11new">
+                <H1>BİR NƏFƏS</H1>
+              </div>
+              <div class="menudiv">
+                <p class="menupp">HOME</p>
+                <p class="aboppnew">About</p>
+                <p class="aboppnew">Services</p>
+                <p class="aboppnew">Blog</p>
+                <p class="aboppnew">Contact</p>
+                <p class="aboppnew">Form</p>
+              </div>
+              <div class="menudiv">
+                <p class="menupp">SERVICE</p>
+                <p class="aboppnew"><i class="fa-regular fa-envelope"></i>birnefessgmail.com</p>
+                <p class="aboppnew"><i class="fa-solid fa-tty"></i>+252251762</p>
+                <p class="aboppnew"><i class="fa-solid fa-phone"></i>+994707971711</p>
+                <p class="aboppnew"><i class="fa-solid fa-location-dot"></i>Azerbaycan,Astara</p>
+              </div>
+              <div class="logo_footer"><i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+              </div>
+    
             </div>
+    
+    
+          </div>
+    
         </div>
-    </footer>
+      </footer>
     <!--footer end-->
     <!--js start-->
     <script src="./assets/js/contact.js"></script>

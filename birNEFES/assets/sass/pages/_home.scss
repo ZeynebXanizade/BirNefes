@@ -1,28 +1,49 @@
 main {
     .section_one_home {
-        background-image: url("/assets/img/pexels-karolina-grabowska-4021801.jpg");
+        // background-image: url("/assets/img/pexels-karolina-grabowska-4021801.jpg");
+        background-image: url("/assets/img/pexels-karolina-grabowska-4386467.jpg");
         height: 100vh;
-        opacity: 0.3;
+        background-repeat: no-repeat;
+        background-position: bottom -700px center;
+        background-size: cover;
 
         .section_one_home_about {
             display: grid;
             place-items: center;
-            position: absolute;
-            top: 50%;
-            left: 13%;
-            font-size: 1.8rem;
+            padding-top: 20%;
+            font-size: 2rem;
             font-weight: bold;
-
+            z-index: 2;
+            color: #234b55;
+            height: 20px;
         }
 
     }
 
 
 }
+//responsive
+@media screen and (max-width: 768px) {
+    .section_one_home {
+     
+        height: 500px !important;
+        background-position: bottom -261px center !important;
+
+        .section_one_home_about {
+            font-size: 1rem !important;
+        }
+
+    }  
+}
+
+
+
+
 
 //card
-.section_cards{
+.section_cards {
     height: 100vh;
+
     .flip-cards {
         background-color: transparent;
         width: 300px;
@@ -31,6 +52,7 @@ main {
         display: flex;
         justify-content: space-around;
         gap: 20px;
+
         .card {
             position: relative;
             width: 100%;
@@ -38,49 +60,54 @@ main {
             text-align: center;
             transition: transform 0.6s;
             transform-style: preserve-3d;
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
-            .flip-card-front, .flip-card-back {
+            .flip-card-front,
+            .flip-card-back {
                 position: absolute;
                 width: 100%;
                 height: 100%;
                 -webkit-backface-visibility: hidden;
                 backface-visibility: hidden;
-              }
-              
-               .flip-card-front {
-                 background-color: #bbb;
-                 color: black;
-               }
-               .flip-card-back {
+            }
 
-                background-color: #2980b9;
+            .flip-card-front {
+                background-color: #bbb;
+                color: black;
+            }
+
+            .flip-card-back {
+
+                background-color: #29b98e;
                 color: white;
-                 transform: rotateY(180deg);
-              }
-          }
-      }
-      .flip-cards:hover.card {
+                transform: rotateY(180deg);
+            }
+        }
+    }
+
+    .flip-cards:hover.card {
         transform: rotateY(180deg);
-      }
-    
-      
-      .imgs{
+    }
+
+
+    .imgs {
         width: 100px;
         height: 120px;
-      }
+    }
 }
+
 // section cards two
 
-$accent-color: #355cc9;
-.section_cards_ABOUTS{
-  height: 100vh;
-h1{
-padding-bottom: 50px;
-  font-size: 30px;
-  color: #2980b9;
-text-align: center;
-}
+$accent-color: #3abc84;
+
+.section_cards_ABOUTS {
+    margin-bottom: 100px;
+    h1 {
+        padding-bottom: 50px;
+        font-size: 30px;
+        color: #3abc84;
+        text-align: center;
+    }
 
 }
 
@@ -133,7 +160,7 @@ text-align: center;
 }
 
 .front {
-    background-color: #fff;
+    background-color: #aa4949;
     background-size: cover;
     background-position: center center;
 
@@ -148,8 +175,8 @@ text-align: center;
         border-radius: 6px;
         backface-visibility: hidden;
         background: linear-gradient(40deg,
-                rgba(67, 138, 243, 0.7),
-                rgba(255, 242, 166, 0.7));
+                rgba(67, 243, 170, 0.7),
+                rgba(228, 230, 231, 0.7));
     }
 
     .inner {
@@ -330,7 +357,157 @@ text-align: center;
 }
 
 
+//map section start
+
+.map {
+    iframe {
+
+        width: 100%;
+        height: 500px;
+        border-radius: 15px;
+    }
+
+}
+
+
+
+// map section end
+
+
+//help section start
+#help {
+    height: 600px;
+    h1 {
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 30px;
+        color: #787878;
+    }
+
+    h4 {
+        font-size: 25px;
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: #787878;
+    }
+
+    h5 {
+        color: #787878;
+        font-size: 25px;
+    }
+
+
+    .background {
+        background: rgba(41, 41, 41, 0.4);
+        height: 30px;
+
+        .color {
+            background: linear-gradient(to left, #12c2e9, #c471ed, #f64f59);
+            height: 30px;
+        }
+
+        h3 {
+            color: #787878;
+            letter-spacing: 2px;
+            font-size: 14px;
+        }
+    }
+
+}
+
+.html {
+    position: relative;
+    margin-bottom: 25px;
+
+    h5 {
+        position: absolute;
+        top: 0;
+        left: 92%;
+
+
+    }
+
+    .color {
+        background: linear-gradient(to left, #12c2e9, #c471ed, #f64f59);
+        width: 93%;
+        height: 5px;
+
+    }
+
+}
+
+.wordPress {
+    position: relative;
+
+    margin-bottom: 25px h5 {
+        position: absolute;
+        top: 0;
+        left: 75%;
+    }
+
+    .color {
+        width: 75%
+    }
+}
+
+
+.magento {
+
+    position: relative;
+    margin-bottom: 25px;
+
+    h5 {
+        position: absolute;
+        top: 0;
+        left: 86%;
+    }
+
+    .color {
+        width: 86%
+    }
+}
+
+
+.uiux {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+h5 {
+    position: absolute;
+    top: 0;
+    left: 88%;
+}
+
+
+.color {
+    width: 88%;
+}
+
+@media screen and (max-width: 768px) {
+    #help {
+     
+width: 500px;
+margin-left: 20px;
+    }  
+}
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//help section end
