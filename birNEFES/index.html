@@ -2,77 +2,357 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>birNEFES</title>
-    <!--css link-->
-    <link rel="stylesheet" href="./assets/css/main.css">
-    <!--icon link-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!--fonts link-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Prompt:ital@1&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bir NEFES</title>
+
+  <!--css link-->
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <!--icon link-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--fonts link-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Prompt:ital@1&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!--navbar start-->
-    <nav>
-        <div class="navBar container">
-            <div class="logo">
-                <label for="" class="agency"><img src="./assets/img/birnefes-logo.jpeg" alt="">
-                    <a href="">BIRNEFES</a>
-
-                </label>
-            </div>
-            <ul class="navbar-menu">
-                <li><a href="">HOME</a></li>
-                <li><a href="">ABOUT</a></li>
-                <li><a href="">SERVICES</a></li>
-                <li><a href="">FORM</a></li>
-                <li><a href="">BLOG</a></li>
-                <li><a href="">CONTACT</a></li>
-            </ul>
-            <div class="btn">GET STARTED</div>
-            <div class="navbar_icon"><i class="fa-solid fa-bars"></i></div>
-        </div>
-<div class="responsive">
-    <ul >
-        <li><a href="">HOME</a></li>
-        <li><a href="">ABOUT</a></li>
-        <li><a href="">SERVICES</a></li>
-        <li><a href="">FORM</a></li>
-        <li><a href="">BLOG</a></li>
-        <li><a href="">CONTACT</a></li>
-    </ul>
-    <div class="btn_responsive">GET STARTED</div>
-</div>
-</nav>
-    <!--navbar end-->
-   <!--main start-->
-<main>
-  <!--section start-->
-<section class="section_one">
-    <div class="section_one_about">
- <h1>THE MOST VALUABLE THING IS HELPING SOMEONE</h1>
- <p>Let's help people together and let everyone be healthy</p>
+  <!--navbar start-->
+  <nav>
+    <div class="navBar ">
+      <div class="logo">
+        <label for=""><img src="./assets/img/birnefes-logo.jpeg" alt="">
+          <span><a class="logo_name" href="">BIR NƏFƏS</a></span>
+        </label>
+      </div>
+      <ul class="navbar-menu">
+        <li><a href="./index.html">HOME</a></li>
+        <li class="dropdown"><a href="./about.html">ABOUT</a>
+          <div class="dropdown-content">
+            <a href="./blog.html">BLOG</a>
+            <a href="./login.html">LOG IN</a>
+            <a href="./form.html">FORM</a>
+          </div>
+        </li>
+        <li><a href="./contact.html">CONTACT</a></li>
+        <li><a href="./favorites.html"><i class="fa-solid fa-heart-circle-plus"></i></a></li>
+      </ul>
+      <div class="btn-navbar"><a href="./login.html">GET STARTED</a></div>
+      <div class="navbar_icon"><i class="fa-solid fa-bars"></i></div>
     </div>
+    <div class="responsive">
+      <ul>
+        <li><a href="./index.html">HOME</a></li>
+        <li><a href="./about.html">ABOUT</a></li>
+        <li><a href="./login.html">LOG IN</a></li>
+        <li><a href="./form.html">FORM</a></li>
+        <li><a href="./blog.html">BLOG</a></li>
+        <li><a href="./contact.html">CONTACT</a></li>
+        <li><a href="./favorites.html"><i class="fa-solid fa-heart-circle-plus"></i></a></li>
+      </ul>
+      <div class="btn_responsive"><a class="btn_responsive_a" href="./login.html">GET STARTED</a></div>
+    </div>
+  </nav>
+  <!--navbar end-->
+  <!--main start-->
+  <main>
+    <!--section start-->
+    <section class="section_one_home">
+      <div class="section_one_home_about">
+        <h1>THE MOST VALUABLE THING IS HELPING SOMEONE</h1>
+        <p>Let's help people together and let everyone be healthy</p>
+      </div>
+    </section>
+    <!--section end-->
+    <!--section start-->
+    <section class="section_cards">
+      <h1>ƏN ÇOX EHTİYACI OLANLAR</h1>
+      <div id="cardContainer"></div>
+    </section>
+
+    <!--section end-->
+    <!--section start help-->
+    <section id="help">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="textbox">
+              <h1>BÖLGƏ FAİZLƏRİ</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 ">
+            <div class="html">
+              <h4>Şərq bölgəsi</h4>
+              <h5>92%</h5>
+              <div class="background">
+                <div class="color"></div>
+              </div>
+            </div>
+            <div class="wordPress">
+              <h4>Qərb bölgəsi</h4>
+              <h5>75%</h5>
+              <div class="background">
+                <div class="color"></div>
+              </div>
+            </div>
+            <div class="magento">
+              <h4>Cənub bölgəsi</h4>
+              <h5>86%</h5>
+              <div class="background">
+                <div class="color"></div>
+              </div>
+            </div>
+            <div class="uiux">
+              <h4>Şimal bölgəsi</h4>
+              <h5>88%</h5>
+              <div class="background">
+                <div class="color"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+    </section>
+    <!--section end help-->
+    <!--section start-->
+    <section class="carousel_cards">
+      <h1>Yardıma ehtiyacı olanlar</h1>
+      <div class="carousel container">
+        <div class="card">
+          <img src="./assets/img/elderly-disability-11.jpg"
+            alt="Fotoğraf 1">
+          <button>Buton 1</button>
+          <p>Bu bir paragraf.</p>
+          <i class="fas fa-heart wishlist" onclick="addToWishlist(1)"></i>
+          <i class="fas fa-basketball-ball"></i>
+        </div>
+        <div class="card">
+          <img src="./assets/img/photo-1550791871-0bcd47c97881.jpg" alt="Fotoğraf 2">
+          <button>Buton 2</button>
+          <p>Bu başka bir paragraf.</p>
+          <i class="fas fa-heart wishlist" onclick="addToWishlist(2)"></i>
+          <i class="fas fa-basketball-ball"></i>
+        </div>
+        <div class="card">
+          <img src="./assets/img/depositphotos_340130740-stock-photo-family-takes-care-member-sick.jpg" alt="Fotoğraf 3">
+          <button>Buton 3</button>
+          <p>Bu bir diğer paragraf.</p>
+          <i class="fas fa-heart wishlist" onclick="addToWishlist(3)"></i>
+          <i class="fas fa-basketball-ball"></i>
+        </div>
+        <div class="card">
+          <img src="./assets/img/depositphotos_398670780-stock-photo-young-male-doctor-pediatrist-and.jpg" alt="Fotoğraf 3">
+          <button>Buton 4</button>
+          <p>Bu bir diğer paragraf.</p>
+          <i class="fas fa-heart wishlist" onclick="addToWishlist(3)"></i>
+          <i class="fas fa-basketball-ball"></i>
+        </div>
+        <div class="card">
+          <img src="./assets/img/photo-1550791871-0bcd47c97881.jpg" alt="Fotoğraf 3">
+          <button>Buton 5</button>
+          <p>Bu bir diğer paragraf.</p>
+          <i class="fas fa-heart wishlist" onclick="addToWishlist(3)"></i>
+          <i class="fas fa-basketball-ball"></i>
+        </div>
+        <div class="card">
+          <img src="./assets/img/photo-1578496781985-452d4a934d50.jpg" alt="Fotoğraf 3">
+          <button>Buton 6</button>
+          <p>Bu bir diğer paragraf.</p>
+          <i class="fas fa-heart wishlist" onclick="addToWishlist(3)"></i>
+          <i class="fas fa-basketball-ball"></i>
+        </div>
+        <div class="card">
+          <img src="./assets/img/elderly-disability-11.jpg"
+          alt="Fotoğraf 1">
+          <button>Buton 7</button>
+          <p>Bu bir diğer paragraf.</p>
+          <i class="fas fa-heart wishlist" onclick="addToWishlist(3)"></i>
+          <i class="fas fa-basketball-ball"></i>
+        </div>
+        <!-- Diğer kartlar buraya eklenir -->
+      </div>
+    </section>
 
 
+    <!--section end -->
+    <!--section start-->
+    <section class="section_cards_ABOUTS">
+      <h1> ƏN ÇOX YARDIM EDƏN İNSANLAR</h1>
+      <div class="wrapper">
+        <div class="card">
+          <input type="checkbox" id="card1" class="more" aria-hidden="true">
+          <div class="content">
+            <div class="front" style="background-image: url('/assets/img/download.jpg')">
+              <div class="inner">
+                <h2>Nərgiz Məlikova</h2>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <label for="card1" class="button" aria-hidden="true">
+                  Details
+                </label>
+              </div>
+            </div>
+            <div class="back">
+              <div class="inner">
+                <div class="description">
+                  <p>5 xəstəyə yardım etmişdir.</p>
+                  <p>İnsanlara yardım etdiyim zaman həyatdan zövq alıram.</p>
+                </div>
+                <div class="location">Azərbaycan ,Mingəçevir</div>
+                <div class="price">3889€ </div>
+                <label for="card1" class="button return" aria-hidden="true">
+                  <i class="fas fa-arrow-left"></i>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <input type="checkbox" id="card2" class="more">
+          <div class="content">
+            <div class="front" style="background-image: url('/assets/img/download\ \(1\).jpg')">
+              <div class="inner">
+                <h2>Murad Ələskərov</h2>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <label for="card2" class="button" aria-hidden="true">
+                  Details
+                </label>
+              </div>
+            </div>
+            <div class="back">
+              <div class="inner">
 
-</section>
-  <!--section end-->
+                <div class="description">
+                  <p>4 xəstəyə yardım etmişdir.</p>
+                  <p>Sizde yardım edin .Həm sevinin həm sevindirin.</p>
+                </div>
+                <div class="location">Azərbaycan ,Naxçıvan</div>
+                <div class="price">4245€</div>
+                <label for="card2" class="button return" aria-hidden="true">
+                  <i class="fas fa-arrow-left"></i>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <input type="checkbox" id="card3" class="more">
+          <div class="content">
+            <div class="front" style="background-image: url('/assets/img/images.jpg')">
+              <div class="inner">
+                <h2>Namiq Ibadov</h2>
+                <div class="rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <label for="card3" class="button" aria-hidden="true">
+                  Details
+                </label>
+              </div>
+            </div>
+            <div class="back">
+              <div class="inner">
+
+                <div class="description">
+                  <p>7 xəstəyə yardım etmişdir.</p>
+                  <p>Siz kömək edin ki, bir gün sizə də kömək etsinlər.</p>
+                </div>
+                <div class="location">Azərbaycan ,Bakı</div>
+                <div class="price">6000€ </div>
+                <label for="card3" class="button return" aria-hidden="true">
+                  <i class="fas fa-arrow-left"></i>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--section end-->
+
+    <!--section contact start -->
+    <section id="map">
+      <div class="row container">
+        <div class="col-lg-12">
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d732221.1271833086!2d47.41953972082367!3d40.57875198227517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307cd91aa21ddf%3A0xe6c9526b3e83cd08!2sAzerbaijan!5e0!3m2!1sen!2sus!4v1686808930017!5m2!1sen!2sus"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <!--section contact end -->
+
+  </main>
+  <!--main end-->
+  <!--footer start-->
+  <footer>
+    <div class="container2">
+
+      <div class="section_Personal">
 
 
-</main>
-   <!--main end-->
+        <div class="fourdiv">
+
+          <div class="agep11new">
+            <H1>BİR NƏFƏS</H1>
+          </div>
+          <div class="menudiv">
+            <p class="menupp">HOME</p>
+            <p class="aboppnew">About</p>
+            <p class="aboppnew">Services</p>
+            <p class="aboppnew">Blog</p>
+            <p class="aboppnew">Contact</p>
+            <p class="aboppnew">Form</p>
+          </div>
+          <div class="menudiv">
+            <p class="menupp">SERVICE</p>
+            <p class="aboppnew"><i class="fa-regular fa-envelope"></i>birnefessgmail.com</p>
+            <p class="aboppnew"><i class="fa-solid fa-tty"></i>+252251762</p>
+            <p class="aboppnew"><i class="fa-solid fa-phone"></i>+994707971711</p>
+            <p class="aboppnew"><i class="fa-solid fa-location-dot"></i>Azerbaycan,Astara</p>
+          </div>
+          <div class="logo_footer"><i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+          </div>
+
+        </div>
 
 
+      </div>
 
-    <script src="./assets/js/script.js"></script>
+    </div>
+  </footer>
+  <!--footer end-->
+  <!--js start-->
+  <script src="./assets/js/script.js"></script>
+  <!--js end-->
 </body>
 
 </html>
