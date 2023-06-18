@@ -20,13 +20,13 @@ fetch("http://localhost:3000/pepole")
                 cardContent.classList.add('card-content');
                 var title = document.createElement('h3');
                 title.textContent = data.title;
-                var info1 = document.createElement('p');
+                var info1 = document.createElement('h4');
                 info1.classList.add('info');
                 info1.textContent = data.name;
-                var info2 = document.createElement('p');
+                var info2 = document.createElement('h4');
                 info2.classList.add('info');
                 info2.textContent = data.surname;
-                const btn = document.createElement("a");
+                const btn = document.createElement("h4");
                 btn.classList.add('btn_cards');
                 btn.innerHTML = "Ətraflı";
                 btn.href = "people_about.html";

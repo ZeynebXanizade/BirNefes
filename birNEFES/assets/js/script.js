@@ -28,10 +28,10 @@ fetch("http://localhost:3000/pepole")
         cardContent.classList.add('card-content');
         var title = document.createElement('h3');
         title.textContent = data.title;
-        var info1 = document.createElement('p');
+        var info1 = document.createElement('h4');
         info1.classList.add('info');
         info1.textContent = data.name;
-        var info2 = document.createElement('p');
+        var info2 = document.createElement('h4');
         info2.classList.add('info');
         info2.textContent = data.surname;
         const btn = document.createElement("a");
@@ -106,5 +106,32 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+//carusel
+document.addEventListener("DOMContentLoaded", function() {
+  const carousel = document.querySelector(".carousel");
+  const cards = carousel.querySelectorAll(".card");
+  const prevBtn = carousel.querySelector(".prev");
+  const nextBtn = carousel.querySelector(".next");
+  let currentIndex = 0;
 
+  showCard(currentIndex);
+
+  prevBtn.addEventListener("click", function() {
+    currentIndex = (currentIndex === 0) ? cards.length - 1 : currentIndex - 1;
+    showCard(currentIndex);
+  });
+
+  nextBtn.addEventListener("click", function() {
+    currentIndex = (currentIndex === cards.length - 1) ? 0 : currentIndex + 1;
+    showCard(currentIndex);
+  });
+
+  function showCard(index) {
+    cards.forEach(function(card) {
+      card.classList.remove("active");
+    });
+
+    cards[index].classList.add("active");
+  }
+});
 
