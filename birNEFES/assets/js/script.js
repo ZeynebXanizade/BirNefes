@@ -6,34 +6,53 @@ navbar_icon.addEventListener("click", function () {
   responsive.classList.toggle("responsive_show")
 })
 //card
-const flipcards = document.querySelector(".flip-cards");
+var cardContainer = document.getElementById('cardContainer');
 fetch("http://localhost:3000/pepole")
   .then((res) => res.json())
   .then((data) => {
-    data.forEach((item, i) => {
+    data.forEach((data, i) => {
       if (i < 3) {
-        const card = document.createElement("div");
-        card.classList.add("card");
-        const name = document.createElement("p");
-        const surname = document.createElement("p");
-        const img = document.createElement("img");
-        img.classList.add("imgs")
-        const title = document.createElement("p");
-        const flipcardfront = document.createElement("div");
-        flipcardfront.classList.add("flip-card-front")
-        const flipcardback = document.createElement("div");
-        flipcardback.classList.add("flip-card-back")
+        var card = document.createElement('div');
+        card.classList.add('card');
+        var card = createCard(data);
 
-        img.src = item.img;
-        name.innerText = "Name: " + item.name;
-        surname.innerText = "Surname: " + item.surname;
-        title.innerText = "Xestelik: " + item.title;
+        var cardImage = document.createElement('div');
+        cardImage.classList.add('card-image');
+        var img = document.createElement('img');
+        img.src = data.img;
+        img.alt = data.title;
+        cardImage.appendChild(img);
+        card.appendChild(cardImage);
 
-         flipcardfront.append(img);
-        flipcardback.append(name, surname, title);
-        card.append(flipcardfront, flipcardback);
-        flipcards.append(card);
+        var cardContent = document.createElement('div');
+        cardContent.classList.add('card-content');
+        var title = document.createElement('h3');
+        title.textContent = data.title;
+        var info1 = document.createElement('p');
+        info1.classList.add('info');
+        info1.textContent = data.name;
+        var info2 = document.createElement('p');
+        info2.classList.add('info');
+        info2.textContent = data.surname;
+        const btn = document.createElement("a");
+        btn.classList.add('btn_cards');
+        btn.innerHTML = "Ətraflı";
+        btn.href = "people_about.html";
+        btn.target = "_blank";
+        cardContent.appendChild(title);
+        cardContent.appendChild(info1);
+        cardContent.appendChild(info2);
+        cardContent.appendChild(btn);
+        card.appendChild(cardContent);
+        cardContainer.appendChild(card);
+        return card;
       }
     });
   })
+
+function createCard(data) {
+  var card = document.createElement('div');
+  card.classList.add('card');
+  return card;
+}
 

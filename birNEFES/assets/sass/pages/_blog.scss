@@ -20,7 +20,63 @@
     background: #654ea3;
     background: -webkit-linear-gradient(to left, #654ea3, #eaafc8);
     background: linear-gradient(to left, #654ea3, #eaafc8);
-    min-height: 100vh;
     padding-bottom: 5rem;
   }
+
+  //blog
+
+  .latest-blog {
+    padding-top: 72px;
+    padding-bottom: 80px;
+    padding-right: 30px;
+    .latest-blog .section-title {
+      margin-bottom: 55px;
+    }
+    
+    .single-latest-blog {
+      margin-bottom: 25px;
+    }
+    
+    .single-latest-blog img {
+    width: 500px;
+    }
+    
+    .single-latest-blog .latest-text {
+      padding-top: 25px;
+    }
+    
+    .single-latest-blog .latest-text .tag-list {
+      margin-bottom: 8px;
+    }
+   
+    .single-latest-blog .latest-text a {
+      display: block;
+    }
+    
+    .single-latest-blog .latest-text a h4 {
+      color: #252525;
+      font-weight: 700;
+      line-height: 30px;
+      margin-bottom: 16px;
+    }
+    
+    .benefit-items {
+      border: 1px solid #ebebeb;
+      margin-top: 45px;
+    }
+    
+    .benefit-items .single-benefit {
+      padding-top: 30px;
+      padding-bottom: 25px;
+      padding-left: 55px;
+      padding-right: 55px;
+      border-right: 1px solid #F3F4F0;
+    }
+  }
+  
+ 
+  
+  
+ 
+  
   
