@@ -163,3 +163,13 @@ background-color: #111222;
 .countdown-el span {
     font-size: 1.3rem;
 }
+@media screen and (min-width: 400px) and (max-width: 768px) {
+    .people_main {
+  margin-left: 100px;
+   display: flex;
+   flex-direction: column;
+  
+  
+    }
+  
+  }

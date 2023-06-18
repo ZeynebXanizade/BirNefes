@@ -126,7 +126,7 @@ main {
       }
       
       .card-content {
-        padding: 30px;
+        padding: 55px;
       }
       
       .card-content h3 {
@@ -542,22 +542,51 @@ margin-left: 20px;
     }  
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //help section end
+.carousel_cards{
+    .carousel {
+        display: flex;
+        justify-content: space-between;
+        overflow-x: auto;
+        padding: 20px 0;
+      }
+      
+      .card {
+        flex: 0 0 auto;
+        width: 300px;
+        margin-right: 20px;
+        background-color: #f2f2f2;
+        padding: 20px;
+      }
+      
+      .card img {
+        width: 100%;
+        height: auto;
+      }
+      
+      .card button {
+        display: block;
+        margin-top: 10px;
+      }
+      
+      .card p {
+        margin-top: 10px;
+      }
+      
+      .card i {
+        margin-top: 10px;
+        cursor: pointer;
+      }
+      
+      .wishlist {
+        color: red;
+      }
+      
+      /* FontAwesome ikonlarının doğru görüntülenebilmesi için gerekli stil */
+      @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css");
+      
+      
+      
+}
+
+ 

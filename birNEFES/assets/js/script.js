@@ -11,7 +11,7 @@ fetch("http://localhost:3000/pepole")
   .then((res) => res.json())
   .then((data) => {
     data.forEach((data, i) => {
-      if (i < 3) {
+      if (i < 4) {
         var card = document.createElement('div');
         card.classList.add('card');
         var card = createCard(data);
@@ -55,4 +55,56 @@ function createCard(data) {
   card.classList.add('card');
   return card;
 }
+
+//wishlist
+const wishlistIcons = document.querySelectorAll('.wishlist');
+wishlistIcons.forEach(icon => {
+  icon.addEventListener('click', () => {
+    const card = icon.parentNode; // Tıklanan ikonun üst öğesini (kartı) al
+    const cardInfo = {
+      image: card.querySelector('img').src,
+      button: card.querySelector('button').innerText,
+      paragraph: card.querySelector('p').innerText
+    };
+    localStorage.setItem('selectedCard', JSON.stringify(cardInfo)); // Seçilen kartın bilgilerini yerel depolamaya kaydet
+    window.location.href = 'favorites.html'; // Yeni sayfaya yönlendir
+  });
+});
+//favo
+function addToWishlist(cardId) {
+  const selectedCard = {
+    image: document.querySelector(`.card:nth-child(${cardId}) img`).src,
+    button: document.querySelector(`.card:nth-child(${cardId}) button`).innerText,
+    paragraph: document.querySelector(`.card:nth-child(${cardId}) p`).innerText
+  };
+
+  const urlParams = new URLSearchParams();
+  urlParams.set('image', selectedCard.image);
+  urlParams.set('button', selectedCard.button);
+  urlParams.set('paragraph', selectedCard.paragraph);
+
+  const url = `favorites.html?${urlParams.toString()}`;
+  window.location.href = url;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const image = urlParams.get('image');
+  const button = urlParams.get('button');
+  const paragraph = urlParams.get('paragraph');
+
+  if (image && button && paragraph) {
+    const cardInfoHTML = `
+      <div class="card">
+        <img src="${image}" alt="Fotoğraf">
+        <button>${button}</button>
+        <p>${paragraph}</p>
+      </div>
+    `;
+    const wishlistInfoElement = document.getElementById('wishlist-info');
+    wishlistInfoElement.innerHTML = cardInfoHTML;
+  }
+});
+
+
 

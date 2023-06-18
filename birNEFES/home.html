@@ -20,7 +20,7 @@
 
 <body>
   <!--navbar start-->
-  <nav >
+  <nav>
     <div class="navBar ">
       <div class="logo">
         <label for=""><img src="./assets/img/birnefes-logo.jpeg" alt="">
@@ -33,7 +33,7 @@
         <li class="dropdown"><a href="./about.html">ABOUT</a>
           <div class="dropdown-content">
             <a href="./blog.html">BLOG</a>
-            <a href="./services.html">SERVICES</a>
+            <a href="./login.html">LOG IN</a>
             <a href="./form.html">FORM</a>
           </div>
         </li>
@@ -47,7 +47,7 @@
       <ul>
         <li><a href="./home.html">HOME</a></li>
         <li><a href="./about.html">ABOUT</a></li>
-        <li><a href="./services.html">SERVICES</a></li>
+        <li><a href="./login.html">LOG IN</a></li>
         <li><a href="./form.html">FORM</a></li>
         <li><a href="./blog.html">BLOG</a></li>
         <li><a href="./contact.html">CONTACT</a></li>
@@ -69,59 +69,89 @@
     <!--section end-->
     <!--section start-->
     <section class="section_cards">
-        <h1>ƏN ÇOX EHTİYACI OLANLAR</h1>
+      <h1>ƏN ÇOX EHTİYACI OLANLAR</h1>
       <div id="cardContainer"></div>
     </section>
 
     <!--section end-->
- <!--section start help-->
+    <!--section start help-->
     <section id="help">
 
       <div class="container">
-          <div class="row">
-              <div class="col-lg-12">
-                  <div class="textbox">
-                      <h1>BÖLGƏ FAİZLƏRİ</h1>
-                  </div>
-              </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="textbox">
+              <h1>BÖLGƏ FAİZLƏRİ</h1>
+            </div>
           </div>
-          <div class="row">
-              <div class="col-lg-6 ">
-                  <div class="html">
-                      <h4>Şərq bölgəsi</h4>
-                      <h5>92%</h5>
-                      <div class="background">
-                          <div class="color"></div>
-                      </div>
-                  </div>
-                  <div class="wordPress">
-                      <h4>Qərb bölgəsi</h4>
-                      <h5>75%</h5>
-                      <div class="background">
-                          <div class="color"></div>
-                      </div>
-                  </div>
-                  <div class="magento">
-                      <h4>Cənub bölgəsi</h4>
-                      <h5>86%</h5>
-                      <div class="background">
-                          <div class="color"></div>
-                      </div>
-                  </div>
-                  <div class="uiux">
-                      <h4>Şimal bölgəsi</h4>
-                      <h5>88%</h5>
-                      <div class="background">
-                          <div class="color"></div>
-                      </div>
-                  </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 ">
+            <div class="html">
+              <h4>Şərq bölgəsi</h4>
+              <h5>92%</h5>
+              <div class="background">
+                <div class="color"></div>
               </div>
+            </div>
+            <div class="wordPress">
+              <h4>Qərb bölgəsi</h4>
+              <h5>75%</h5>
+              <div class="background">
+                <div class="color"></div>
+              </div>
+            </div>
+            <div class="magento">
+              <h4>Cənub bölgəsi</h4>
+              <h5>86%</h5>
+              <div class="background">
+                <div class="color"></div>
+              </div>
+            </div>
+            <div class="uiux">
+              <h4>Şimal bölgəsi</h4>
+              <h5>88%</h5>
+              <div class="background">
+                <div class="color"></div>
+              </div>
+            </div>
           </div>
+        </div>
       </div>
       </div>
 
-  </section>
-   <!--section end help-->
+    </section>
+    <!--section end help-->
+    <!--section start-->
+    <section class="carousel_cards">
+      <div class="carousel">
+        <div class="card">
+          <img src="./assets/img/depositphotos_340130740-stock-photo-family-takes-care-member-sick.jpg" alt="Fotoğraf 1">
+          <button>Buton 1</button>
+          <p>Bu bir paragraf.</p>
+          <i class="fas fa-heart wishlist" onclick="addToWishlist(1)"></i>
+          <i class="fas fa-basketball-ball"></i>
+        </div>
+        <div class="card">
+          <img src="fotograf2.jpg" alt="Fotoğraf 2">
+          <button>Buton 2</button>
+          <p>Bu başka bir paragraf.</p>
+          <i class="fas fa-heart wishlist" onclick="addToWishlist(2)"></i>
+          <i class="fas fa-basketball-ball"></i>
+        </div>
+        <div class="card">
+          <img src="fotograf3.jpg" alt="Fotoğraf 3">
+          <button>Buton 3</button>
+          <p>Bu bir diğer paragraf.</p>
+          <i class="fas fa-heart wishlist" onclick="addToWishlist(3)"></i>
+          <i class="fas fa-basketball-ball"></i>
+        </div>
+        <!-- Diğer kartlar buraya eklenir -->
+      </div>   
+    </section>
+
+
+    <!--section end -->
     <!--section start-->
     <section class="section_cards_ABOUTS">
       <h1> ƏN ÇOX YARDIM EDƏN İNSANLAR</h1>
@@ -233,16 +263,16 @@
 
     <!--section contact start -->
     <section id="map">
-        <div class="row container">
-          <div class="col-lg-12">
-            <div class="map">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d732221.1271833086!2d47.41953972082367!3d40.57875198227517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307cd91aa21ddf%3A0xe6c9526b3e83cd08!2sAzerbaijan!5e0!3m2!1sen!2sus!4v1686808930017!5m2!1sen!2sus"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+      <div class="row container">
+        <div class="col-lg-12">
+          <div class="map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d732221.1271833086!2d47.41953972082367!3d40.57875198227517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307cd91aa21ddf%3A0xe6c9526b3e83cd08!2sAzerbaijan!5e0!3m2!1sen!2sus!4v1686808930017!5m2!1sen!2sus"
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
+      </div>
       </div>
     </section>
     <!--section contact end -->

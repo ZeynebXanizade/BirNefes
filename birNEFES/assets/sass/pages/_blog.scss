@@ -15,7 +15,17 @@
     }
 
 }
-
+@media screen and (min-width: 400px) and (max-width: 768px) {
+  .section_one_blog_about {
+ 
+ h1{
+  font-size: 6rem;
+ }
+}
+.single-latest-blog img {
+  width: 385px !important;
+  }
+}
   .accordion {
     background: #654ea3;
     background: -webkit-linear-gradient(to left, #654ea3, #eaafc8);

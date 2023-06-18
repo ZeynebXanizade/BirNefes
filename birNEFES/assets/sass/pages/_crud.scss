@@ -1,0 +1,33 @@
+.crud_form {
+    margin-bottom: 100px;
+    display: grid;
+    place-items: center;
+
+    .cards {
+        background-color: #234b55;
+        width: 500px;
+        height: 500px;
+    }
+
+    form {
+        margin-top: 100px;
+        display: grid;
+        place-items: center;
+        gap: 10px;
+
+        input {
+            width: 300px;
+            height: 60px;
+        }
+    }
+
+    button {
+        width: 100px;
+        height: 30px;
+        background-color: #eaebec;
+        border-radius: 1rem;
+        color: #234b55;
+        cursor: pointer;
+        margin-left: 40px;
+    }
+}

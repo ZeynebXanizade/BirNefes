@@ -17,66 +17,69 @@
     }
 
 }
-.mains i {
-    color: rgb(72, 79, 86);
+.forms{
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+    
+    input[type="text"],
+    input[type="date"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    
+    select {
+        height: 35px;
+    }
+    
+    .submit-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color:  #234b55;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
 }
-
-.form_section{
-    height: 100vh;
-    .container3 {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        .hrdiv {
-            position: relative;
-            margin-bottom: 20px;
-            width: 367px;
-            margin-left: 573px;
-            color: #495057;
-        }
-        
-        .hrdiv span {
-            position: absolute;
-            top: 5px;
-            right: 159px;
-            background: #fff;
-            padding: 0 20px;
-            font-size: 16px;
-            font-weight: 600;
-        }
-        
-        .custom-select {
-            display: inline-block;
-            height: calc(2.25rem + 2px);
-            padding: 0.375rem 1.75rem 0.375rem 0.75rem;
-            line-height: 1.5;
-            color: #495057;
-            vertical-align: middle;
-            background: #fff url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
-            background-size: 8px 10px;
-            border: 1px solid #ced4da;
-            border-radius: 0.25rem;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-        }
-        
-        .btn1 {
-            background-color: rgb(65, 175, 236);
-            border: none;
-        }
-        
-        .btn2 {
-            background-color: rgb(64, 94, 158);
-            border: none;
-        }
-        
-        .mains {
-            width: 373px;
-            margin-left: 571px;
-            position: relative;
+@media screen and (min-width: 400px)and (max-width: 768px){
+    .section_one_form{
+        margin-top: -200px;
+        .section_one_form_about{
+            h1{
+                margin-top: 303px;
+                font-size: 6rem !important;
+            }
         }
     }
+  .forms{
+    .container{
+        max-width: 300px;  
+    }
+    .form-group{
+        width: 200px;
+    }
+  }
+
 }
-
-

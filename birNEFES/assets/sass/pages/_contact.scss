@@ -21,7 +21,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 400px) and (max-width: 768px) {
   .section_one_contact_about {
 
     left: 15% !important;
@@ -176,7 +176,7 @@ form {
   transform: translateY(-0.15em);
 }
 
-@media screen and (max-width: 768px) {
+@media screen  and (min-width: 400px) and (max-width: 768px) {
   .btn.btn-primary {
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
