@@ -18,8 +18,9 @@
 
 //flip cards
 .flip-card-section {
-     height: 1200px;
-     margin-top: 300px;
+    height: 1200px;
+    margin-top: 300px;
+
     h1 {
         font-size: 50px;
         color: #16958a8d;
@@ -29,6 +30,7 @@
 
     .flip-card-parent {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-around;
     }
 
@@ -72,6 +74,10 @@
         color: darkslategray;
         transform: rotateY(180deg);
         margin-top: 100px;
+
+        p {
+            color: darkslategray;
+        }
     }
 }
 
@@ -83,7 +89,8 @@
         display: flex;
         justify-content: space-around;
     }
-margin-top: 200px;
+
+    margin-top: 200px;
     height: 658px;
 
     h1 {
@@ -120,24 +127,72 @@ margin-top: 200px;
 
 }
 
-//responsive
-@media screen and (min-width: 400px) and (max-width: 768px) {
+
+//responsive tablet
+
+@media screen and (max-width: 768px) {
+ 
+
     .section_one_abouts {
-        font-size: 2rem !important;
+        font-size: 4rem !important;
         padding-top: 50% !important;
+        padding-left: 0 !important;
+    }
+
+    .section_two {
+        margin-top: 33px;
+    }
+
+    .flip-card-section {
+        margin-top: 485px;
+        margin-bottom: 40px;
+
+        .flip-card-back {
+            padding-right: 210px;
+            margin-top: 0 !important;
+
+            p {
+                font-size: 10px;
+            }
+        }
+    }
+
+
+
+
+    .flip-card-front,
+    .flip-card-back {
+        width: 50% !important;
+        height: 50% !important;
+
+        img {
+            width: 240px !important;
+            height: 226px !important;
+        }
+    }
+
+    .flip-card-section .flip-card-inner {
+
+        width: 80%;
+        height: 75%;
     }
 
     .section_two_child {
+        flex-direction: column;
+
         .abouts {
 
             div {
-                width: 300px;
+                width: 400px;
             }
 
+            div:hover {
+                width: 450px;
+            }
         }
 
         img {
-            width: 300px;
+            width: 600px;
         }
     }
 
@@ -145,4 +200,84 @@ margin-top: 200px;
         flex-direction: column;
         align-items: center;
     }
+
+}
+
+
+
+
+//responsive mobile
+@media only screen and (max-width: 479px) {
+    .section_one_about {
+        height: 400px;
+    }
+
+    .section_one_abouts {
+        font-size: 2rem !important;
+        padding-top: 50% !important;
+        padding-left: 0 !important;
+    }
+
+    .section_two {
+        margin-top: 33px;
+    }
+
+    .flip-card-section {
+        margin-top: 485px;
+        margin-bottom: 40px;
+
+        .flip-card-back {
+            padding-right: 210px;
+            margin-top: 0 !important;
+
+            p {
+                font-size: 10px;
+            }
+        }
+    }
+
+
+
+
+    .flip-card-front,
+    .flip-card-back {
+        width: 50% !important;
+        height: 50% !important;
+
+        img {
+            width: 240px !important;
+            height: 226px !important;
+        }
+    }
+
+    .flip-card-section .flip-card-inner {
+
+        width: 80%;
+        height: 75%;
+    }
+
+    .section_two_child {
+        flex-direction: column;
+
+        .abouts {
+
+            div {
+                width: 300px;
+            }
+
+            div:hover {
+                width: 350px;
+            }
+        }
+
+        img {
+            width: 390px;
+        }
+    }
+
+    .flip-card-parent {
+        flex-direction: column;
+        align-items: center;
+    }
+
 }

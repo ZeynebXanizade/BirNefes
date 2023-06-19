@@ -223,12 +223,32 @@
 	margin: -20px 0 50px;
 }
 
-@media screen and (min-width: 400px) and (max-width: 768px){
-    .login_section{
-width: 500px;
-form{ 
-    padding-right: 190px;  
-}
-    }
-}
 
+
+//responsive tablet
+
+@media screen and (max-width: 768px) {
+
+
+    .login_section{
+        width: 500px;
+        form{ 
+            padding-right: 190px;  
+        }
+            }
+  }
+  
+  
+  
+  
+  //responsive mobile
+  @media only screen and (max-width: 479px) {
+    .login_section{
+        width: 448px;
+        form{ 
+            padding-right: 215px ;  
+        }
+            }
+  
+  
+  }

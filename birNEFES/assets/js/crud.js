@@ -1,65 +1,16 @@
-var cardContainer = document.getElementById('cardContainer');
-fetch("http://localhost:3000/pepole")
-    .then((res) => res.json())
-    .then((data) => {
-        data.forEach((data, i) => {
-            if (i < 4) {
-                var card = document.createElement('div');
-                card.classList.add('card');
-                var card = createCard(data);
-
-                var cardImage = document.createElement('div');
-                cardImage.classList.add('card-image');
-                var img = document.createElement('img');
-                img.src = data.img;
-                img.alt = data.title;
-                cardImage.appendChild(img);
-                card.appendChild(cardImage);
-
-                var cardContent = document.createElement('div');
-                cardContent.classList.add('card-content');
-                var title = document.createElement('h3');
-                title.textContent = data.title;
-                var info1 = document.createElement('h4');
-                info1.classList.add('info');
-                info1.textContent = data.name;
-                var info2 = document.createElement('h4');
-                info2.classList.add('info');
-                info2.textContent = data.surname;
-                const btn = document.createElement("h4");
-                btn.classList.add('btn_cards');
-                btn.innerHTML = "Ətraflı";
-                btn.href = "people_about.html";
-                btn.target = "_blank";
-                cardContent.appendChild(title);
-                cardContent.appendChild(info1);
-                cardContent.appendChild(info2);
-                cardContent.appendChild(btn);
-                card.appendChild(cardContent);
-                cardContainer.appendChild(card);
-                return card;
-            }
-        });
-    })
-
-function createCard(data) {
-    var card = document.createElement('div');
-    card.classList.add('card');
-    return card;
-}
-
 
 //update
 
 const update = document.querySelector(".update");
 update.addEventListener("click", function () {
-    fetch("http://localhost:3000/pepole", {
+    fetch("http://localhost:3000/pepole/", {
 
         method: "PUT",
         body: JSON.stringify({
-            name: "nuray",
-            surname: "elizade",
-            img: "team.jpc",
+            name: "Nuray",
+            surname: "Elizade",
+            img: "https://www.shutterstock.com/image-photo/sick-senior-woman-suffer-sore-260nw-1539298682.jpg",
+            unitPrice: 400000,
             title: "Göz xesteliyi"
         }),
         headers: {

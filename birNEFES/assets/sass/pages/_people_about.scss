@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800');
 
-html{
+html {
     scroll-behavior: smooth;
 }
-.people_body{
-    background: #111222; 
+
+.people_body {
+    background: #111222;
 }
-.sec-01,.sec-02,.sec-03 {
+
+.sec-01,
+.sec-02,
+.sec-03 {
     position: relative;
     display: flex;
     justify-content: center;
@@ -16,7 +20,7 @@ html{
     background: #111222;
 }
 
-.container_people{
+.container_people {
     position: relative;
     display: flex;
     justify-content: center;
@@ -24,12 +28,12 @@ html{
     flex-direction: column;
 }
 
-.main-title{
+.main-title {
     font-size: 4em;
     margin-bottom: 50px;
 }
 
-.content{
+.content {
     position: relative;
     width: 1150px;
     display: flex;
@@ -37,14 +41,14 @@ html{
     align-items: center;
 }
 
-.content .image{
+.content .image {
     position: relative;
     width: 800px;
     height: 400px;
     overflow: hidden;
 }
 
-.content .image img{
+.content .image img {
     z-index: 111;
     position: absolute;
     top: 0;
@@ -55,7 +59,7 @@ html{
     border-radius: 10px;
 }
 
-.content .text-box{
+.content .text-box {
     z-index: 222;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
@@ -66,55 +70,57 @@ html{
     transform: translate(-80px, 50px);
 }
 
-.content .text-box h3{
+.content .text-box h3 {
     font-size: 2em;
     margin-bottom: 10px;
 }
 
 
-.section-title{
+.section-title {
     font-size: 3em;
     margin-bottom: 80px;
 }
 
-.info-title{
+.info-title {
     font-size: 1.8em;
     margin-bottom: 10px;
 }
 
-.info{
+.info {
     width: 700px;
     margin-left: 50px;
 }
 
-.media-info{
+.media-info {
     width: 400px;
     margin-left: 50px;
 }
 
-.media-info li{
+.media-info li {
     list-style: none;
     font-size: 1.4em;
 }
 
-.media-info li a{
+.media-info li a {
     color: #FFF;
     text-decoration: none;
 }
 
-.media-info li:not(:last-child){
+.media-info li:not(:last-child) {
     margin-bottom: 50px;
 }
 
-.media-info li:nth-child(1), .media-info li:nth-child(5){
+.media-info li:nth-child(1),
+.media-info li:nth-child(5) {
     padding-left: 100px;
 }
 
-.media-info li:nth-child(1), .media-info li:nth-child(4){
+.media-info li:nth-child(1),
+.media-info li:nth-child(4) {
     padding-left: 50px;
 }
 
-.sec-03{
+.sec-03 {
     margin-bottom: 100px;
 }
 
@@ -127,13 +133,14 @@ html{
 }
 
 .section_countdown {
-background-color: #111222;
+    background-color: #111222;
     display: flex;
     flex-direction: column;
     align-items: center;
     font-family: "Poppins", sans-serif;
     margin: 0;
     color: #FFF;
+
     h1 {
         font-weight: normal;
         font-size: 4rem;
@@ -163,7 +170,8 @@ background-color: #111222;
 .countdown-el span {
     font-size: 1.3rem;
 }
-.peopleabout_btn{
+
+.peopleabout_btn {
     background-color: rgb(57, 57, 134);
     border-radius: 11px;
     border: none;
@@ -174,13 +182,75 @@ background-color: #111222;
     margin: 10px 2px;
     cursor: pointer;
 }
-@media screen and (min-width: 400px) and (max-width: 768px) {
+
+//responsive tablet
+
+@media screen and (max-width: 768px) {
+
+
     .people_main {
-  margin-left: 100px;
-   display: flex;
-   flex-direction: column;
-  
-  
+        margin-left: 100px;
+        display: flex;
+        flex-direction: column;
+
+
     }
-  
-  }
+
+    .content .image img {
+        width: 73%;
+        height: 77%;
+
+
+    }
+
+    .section_countdown h1 {
+        font-size: 3rem;
+    }
+
+    .content .text-box {
+        padding: 34px;
+        max-width: 316px;
+    }
+
+    .sec-01,
+    .sec-02,
+    .sec-03 {
+        padding: 17px 25px;
+    }
+
+
+}
+
+
+
+
+//responsive mobile
+@media only screen and (max-width: 479px) {
+    .people_main {
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+    .content .image img {
+        width: 53%;
+        height: 57%;
+
+
+    }
+
+    .section_countdown h1 {
+        font-size: 3rem;
+    }
+
+    .content .text-box {
+        padding: 34px;
+        max-width: 316px;
+    }
+    .sec-01,
+    .sec-02,
+    .sec-03 {
+        padding: 17px 25px;
+    }
+}

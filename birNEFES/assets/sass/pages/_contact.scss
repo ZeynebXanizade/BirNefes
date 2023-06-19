@@ -22,16 +22,6 @@
   }
 }
 
-@media screen and (min-width: 400px) and (max-width: 768px) {
-  .section_one_contact_about {
-
-    left: 15% !important;
-    font-size: 3.2rem !important;
-
-
-  }
-
-}
 
 svg {
   height: 23rem;
@@ -177,15 +167,32 @@ form {
   transform: translateY(-0.15em);
 }
 
-@media screen  and (min-width: 400px) and (max-width: 768px) {
-  .btn.btn-primary {
-    font-family: 'Quicksand', sans-serif;
-    font-weight: bold;
-    padding: 0 3rem;
-    border: 0;
-    border-radius: 3rem;
-    background-image: linear-gradient(131deg, #ffd340, #ff923c, #ff923c, #ff923c);
-    background-size: 300% 100%;
-    transition: all 0.3s ease-in-out;
+
+//responsive tablet
+
+@media screen and (max-width: 768px) {
+ 
+
+  .section_one_contact_about {
+
+    left: 15% !important;
+    font-size: 3.2rem !important;
+
+
   }
+}
+
+
+
+
+//responsive mobile
+@media only screen and (max-width: 479px) {
+  .section_one_contact_about {
+
+    left: 15% !important;
+    font-size: 2.8rem !important;
+
+  }
+
+
 }

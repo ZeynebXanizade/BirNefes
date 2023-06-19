@@ -64,7 +64,12 @@
     }
     
 }
-@media screen and (min-width: 400px)and (max-width: 768px){
+
+//responsive tablet
+
+@media screen and (max-width: 768px) {
+
+
     .section_one_form{
         margin-top: -200px;
         .section_one_form_about{
@@ -82,5 +87,30 @@
         width: 200px;
     }
   }
-
-}
+  }
+  
+  
+  
+  
+  //responsive mobile
+  @media only screen and (max-width: 479px) {
+    .section_one_form{
+        margin-top: -200px;
+        .section_one_form_about{
+            h1{
+                margin-top: 303px;
+                font-size: 6rem !important;
+            }
+        }
+    }
+  .forms{
+    .container{
+        max-width: 280px;  
+    }
+    .form-group{
+        width: 200px;
+    }
+  }
+  
+  
+  }
