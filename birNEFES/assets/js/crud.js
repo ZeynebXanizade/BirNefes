@@ -29,7 +29,7 @@ update.addEventListener("click", function () {
 //delete
 const del = document.querySelector(".delete");
 del.addEventListener("click", function () {
-    fetch("http://localhost:3000/pepole/", {
+    fetch("http://localhost:3000/pepole/9", {
 
         method: "DELETE"
     })
