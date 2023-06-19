@@ -1,0 +1,86 @@
+<section class="carousel_cards">
+    <h1>Yardıma ehtiyacı olanlar</h1>
+    <div class="carousel container">
+      <div class="card">
+        <img src="./assets/img/elderly-disability-11.jpg"
+          alt="Fotoğraf 1">
+        <button>Buton 1</button>
+        <p>Bu bir paragraf.</p>
+        <i class="fas fa-heart wishlist" onclick="addToWishlist(1)"></i>
+       <i class="fa-solid fa-handshake"></i>
+      </div>
+      <div class="card">
+        <img src="./assets/img/photo-1550791871-0bcd47c97881.jpg" alt="Fotoğraf 2">
+        <button>Buton 2</button>
+        <p>Bu başka bir paragraf.</p>
+        <i class="fas fa-heart wishlist" onclick="addToWishlist(2)"></i>
+       <i class="fa-solid fa-handshake"></i>
+      </div>
+      <div class="card">
+        <img src="./assets/img/depositphotos_340130740-stock-photo-family-takes-care-member-sick.jpg" alt="Fotoğraf 3">
+        <button>Buton 3</button>
+        <p>Bu bir diğer paragraf.</p>
+        <i class="fas fa-heart wishlist" onclick="addToWishlist(3)"></i>
+       <i class="fa-solid fa-handshake"></i>
+      </div>
+      <div class="card">
+        <img src="./assets/img/depositphotos_398670780-stock-photo-young-male-doctor-pediatrist-and.jpg" alt="Fotoğraf 3">
+        <button>Buton 4</button>
+        <p>Bu bir diğer paragraf.</p>
+        <i class="fas fa-heart wishlist" onclick="addToWishlist(3)"></i>
+       <i class="fa-solid fa-handshake"></i>
+      </div>
+      <div class="card">
+        <img src="./assets/img/photo-1550791871-0bcd47c97881.jpg" alt="Fotoğraf 3">
+        <button>Buton 5</button>
+        <p>Bu bir diğer paragraf.</p>
+        <i class="fas fa-heart wishlist" onclick="addToWishlist(3)"></i>
+       <i class="fa-solid fa-handshake"></i>
+      </div>
+      <div class="card">
+        <img src="./assets/img/photo-1578496781985-452d4a934d50.jpg" alt="Fotoğraf 3">
+        <button>Buton 6</button>
+        <p>Bu bir diğer paragraf.</p>
+        <i class="fas fa-heart wishlist" onclick="addToWishlist(3)"></i>
+       <i class="fa-solid fa-handshake"></i>
+      </div>
+      <div class="card">
+        <img src="./assets/img/elderly-disability-11.jpg"
+        alt="Fotoğraf 1">
+        <button>Buton 7</button>
+        <p>Bu bir diğer paragraf.</p>
+        <i class="fas fa-heart wishlist" onclick="addToWishlist(3)"></i>
+       <i class="fa-solid fa-handshake"></i>
+      </div>
+      <!-- Diğer kartlar buraya eklenir -->
+    </div>
+  </section>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+  const carousel = document.querySelector(".carousel");
+  const cards = carousel.querySelectorAll(".card");
+  const prevBtn = carousel.querySelector(".prev");
+  const nextBtn = carousel.querySelector(".next");
+  let currentIndex = 0;
+
+  showCard(currentIndex);
+
+  prevBtn.addEventListener("click", function() {
+    currentIndex = (currentIndex === 0) ? cards.length - 1 : currentIndex - 1;
+    showCard(currentIndex);
+  });
+
+  nextBtn.addEventListener("click", function() {
+    currentIndex = (currentIndex === cards.length - 1) ? 0 : currentIndex + 1;
+    showCard(currentIndex);
+  });
+
+  function showCard(index) {
+    cards.forEach(function(card) {
+      card.classList.remove("active");
+    });
+
+    cards[index].classList.add("active");
+  }
+});
+  </script>

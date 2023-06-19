@@ -163,6 +163,17 @@ background-color: #111222;
 .countdown-el span {
     font-size: 1.3rem;
 }
+.peopleabout_btn{
+    background-color: rgb(57, 57, 134);
+    border-radius: 11px;
+    border: none;
+    width: 167px;
+    padding: 3px 14px;
+    text-align: center;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+}
 @media screen and (min-width: 400px) and (max-width: 768px) {
     .people_main {
   margin-left: 100px;

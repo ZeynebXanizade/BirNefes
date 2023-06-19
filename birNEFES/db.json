@@ -11,15 +11,36 @@
       "id": 2,
       "name": "Nuray",
       "surname": "Melikova",
-      "title": "Agciyer xesteliyi",
+      "title": "Göz xesteliyi",
       "img": "https://st3.depositphotos.com/32681596/34013/i/600/depositphotos_340130740-stock-photo-family-takes-care-member-sick.jpg"
     },
     {
       "id": 3,
-      "name": "Namiq",
+      "name": "Nuranə",
+      "surname": "Rustemli",
+      "title": "Agciyer xesteliyi",
+      "img": "https://img.freepik.com/free-photo/retired-woman-with-oxygen-tube-against-respiratory-problem-hospital-ward-bed-sick-patient-breathing-heavily-while-resting-waiting-medical-assistance-with-iv-drip-bag_482257-28307.jpg?w=2000"
+    },
+    {
+      "id": 4,
+      "name": "Cabbar",
+      "surname": "Quluzadə",
+      "title": "Beyin xesteliyi",
+      "img": "https://st4.depositphotos.com/1000975/39867/i/600/depositphotos_398670780-stock-photo-young-male-doctor-pediatrist-and.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Cəmil",
       "surname": "Rustemli",
       "title": "Qaraciyer xesteliyi",
-      "img": "https://st4.depositphotos.com/1000975/39867/i/600/depositphotos_398670780-stock-photo-young-male-doctor-pediatrist-and.jpg"
+      "img": "https://t4.ftcdn.net/jpg/01/52/60/51/360_F_152605147_u3ZI7RuoOsQ1JAy0yUWUtkQcLmJvQJNB.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Əli",
+      "surname": "Qasımov",
+      "title": "Qaraciyer xesteliyi",
+      "img": "https://www.shutterstock.com/image-photo/elderly-80-plus-year-old-260nw-143533243.jpg"
     }
   ]
 }

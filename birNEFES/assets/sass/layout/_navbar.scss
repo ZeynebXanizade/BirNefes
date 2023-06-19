@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@900&display=swap');
+
+
 nav {
     position: sticky;
     top: 0;
@@ -12,11 +15,14 @@ nav {
         color: #234b55;
         z-index: 3;
 
-        label {
-            .logo_name {
-                color: #234b55;
-            }
+        .logo_name {
+            color: #234b55;
+            font-family: 'Kanit', sans-serif;
+            padding-right: 150px;
+         font-size: 2.5rem;
+        text-shadow: gray;
         }
+
 
 
         img {

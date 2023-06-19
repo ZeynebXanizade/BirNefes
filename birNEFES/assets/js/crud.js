@@ -78,7 +78,7 @@ update.addEventListener("click", function () {
 //delete
 const del = document.querySelector(".delete");
 del.addEventListener("click", function () {
-    fetch("http://localhost:3000/pepole/4", {
+    fetch("http://localhost:3000/pepole/", {
 
         method: "DELETE"
     })

@@ -25,7 +25,7 @@
     <div class="navBar ">
       <div class="logo">
         <label for=""><img src="./assets/img/birnefes-logo.jpeg" alt="">
-          <span><a class="logo_name" href="">BIR NƏFƏS</a></span>
+          <span><a class="logo_name" href="">BİR NƏFƏS</a></span>
         </label>
       </div>
       <ul class="navbar-menu">
@@ -38,7 +38,8 @@
           </div>
         </li>
         <li><a href="./contact.html">CONTACT</a></li>
-        <li><a href="./favorites.html"><i class="fa-solid fa-heart-circle-plus"></i></a></li>
+        <li><a href="./wishlist.html"><i class="fa-solid fa-heart-circle-plus"></i></a></li>
+        <li><a href="./basket.html"> <i class="fa-solid fa-hand-holding-heart"></i></a></li>
       </ul>
       <div class="btn-navbar"><a href="./login.html">GET STARTED</a></div>
       <div class="navbar_icon"><i class="fa-solid fa-bars"></i></div>
@@ -51,7 +52,8 @@
         <li><a href="./form.html">FORM</a></li>
         <li><a href="./blog.html">BLOG</a></li>
         <li><a href="./contact.html">CONTACT</a></li>
-        <li><a href="./favorites.html"><i class="fa-solid fa-heart-circle-plus"></i></a></li>
+        <li><a href="./wishlist.html"><i class="fa-solid fa-heart-circle-plus"></i></a></li>
+        <li><a href="./basket.html"> <i class="fa-solid fa-hand-holding-heart"></i></a></li>
       </ul>
       <div class="btn_responsive"><a class="btn_responsive_a" href="./login.html">GET STARTED</a></div>
     </div>
@@ -70,7 +72,42 @@
     <!--section start-->
     <section class="section_cards">
       <h1>ƏN ÇOX EHTİYACI OLANLAR</h1>
-      <div id="cardContainer"></div>
+      <div id="cardContainer">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="./assets/img/depositphotos_340130740-stock-photo-family-takes-care-member-sick.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+              <h1>Nuray Melikova</h1> 
+              <p>Ağ ciyər xəstəliyi</p> 
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="./assets/img/depositphotos_398670780-stock-photo-young-male-doctor-pediatrist-and.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+              <h1>Namiq Rüstəmli</h1> 
+              <p>Qara ciyər xəstəliyi</p>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="./assets/img/photo-1578496781985-452d4a934d50.jpg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+              <h1>Rasim Sultanov</h1> 
+              <p>Qara ciyər xəstəliyi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="cards-btn"> <a href="./people_about.html">ƏTRAFLI</a></button>
     </section>
 
     <!--section end-->
@@ -126,58 +163,6 @@
     <section class="carousel_cards">
       <h1>Yardıma ehtiyacı olanlar</h1>
       <div class="carousel container">
-        <div class="card">
-          <img src="./assets/img/elderly-disability-11.jpg"
-            alt="Fotoğraf 1">
-          <button>Buton 1</button>
-          <p>Bu bir paragraf.</p>
-          <i class="fas fa-heart wishlist" onclick="addToWishlist(1)"></i>
-          <i class="fas fa-basketball-ball"></i>
-        </div>
-        <div class="card">
-          <img src="./assets/img/photo-1550791871-0bcd47c97881.jpg" alt="Fotoğraf 2">
-          <button>Buton 2</button>
-          <p>Bu başka bir paragraf.</p>
-          <i class="fas fa-heart wishlist" onclick="addToWishlist(2)"></i>
-          <i class="fas fa-basketball-ball"></i>
-        </div>
-        <div class="card">
-          <img src="./assets/img/depositphotos_340130740-stock-photo-family-takes-care-member-sick.jpg" alt="Fotoğraf 3">
-          <button>Buton 3</button>
-          <p>Bu bir diğer paragraf.</p>
-          <i class="fas fa-heart wishlist" onclick="addToWishlist(3)"></i>
-          <i class="fas fa-basketball-ball"></i>
-        </div>
-        <div class="card">
-          <img src="./assets/img/depositphotos_398670780-stock-photo-young-male-doctor-pediatrist-and.jpg" alt="Fotoğraf 3">
-          <button>Buton 4</button>
-          <p>Bu bir diğer paragraf.</p>
-          <i class="fas fa-heart wishlist" onclick="addToWishlist(3)"></i>
-          <i class="fas fa-basketball-ball"></i>
-        </div>
-        <div class="card">
-          <img src="./assets/img/photo-1550791871-0bcd47c97881.jpg" alt="Fotoğraf 3">
-          <button>Buton 5</button>
-          <p>Bu bir diğer paragraf.</p>
-          <i class="fas fa-heart wishlist" onclick="addToWishlist(3)"></i>
-          <i class="fas fa-basketball-ball"></i>
-        </div>
-        <div class="card">
-          <img src="./assets/img/photo-1578496781985-452d4a934d50.jpg" alt="Fotoğraf 3">
-          <button>Buton 6</button>
-          <p>Bu bir diğer paragraf.</p>
-          <i class="fas fa-heart wishlist" onclick="addToWishlist(3)"></i>
-          <i class="fas fa-basketball-ball"></i>
-        </div>
-        <div class="card">
-          <img src="./assets/img/elderly-disability-11.jpg"
-          alt="Fotoğraf 1">
-          <button>Buton 7</button>
-          <p>Bu bir diğer paragraf.</p>
-          <i class="fas fa-heart wishlist" onclick="addToWishlist(3)"></i>
-          <i class="fas fa-basketball-ball"></i>
-        </div>
-        <!-- Diğer kartlar buraya eklenir -->
       </div>
     </section>
 
@@ -352,6 +337,7 @@
   <!--footer end-->
   <!--js start-->
   <script src="./assets/js/script.js"></script>
+
   <!--js end-->
 </body>
 

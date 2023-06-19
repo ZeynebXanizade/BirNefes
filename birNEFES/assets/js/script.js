@@ -5,133 +5,74 @@ navbar_icon.addEventListener("click", function () {
   navBar.classList.toggle("navBar_js")
   responsive.classList.toggle("responsive_show")
 })
-//card
-var cardContainer = document.getElementById('cardContainer');
+
+//carusel cards
+const total = document.querySelector(".total");
+const carousel = document.querySelector(".carousel");
+
+let basket_arr = [];
+let wishlist_arr = [];
 fetch("http://localhost:3000/pepole")
   .then((res) => res.json())
   .then((data) => {
-    data.forEach((data, i) => {
-      if (i < 4) {
-        var card = document.createElement('div');
-        card.classList.add('card');
-        var card = createCard(data);
-
-        var cardImage = document.createElement('div');
-        cardImage.classList.add('card-image');
-        var img = document.createElement('img');
-        img.src = data.img;
-        img.alt = data.title;
-        cardImage.appendChild(img);
-        card.appendChild(cardImage);
-
-        var cardContent = document.createElement('div');
-        cardContent.classList.add('card-content');
-        var title = document.createElement('h3');
-        title.textContent = data.title;
-        var info1 = document.createElement('h4');
-        info1.classList.add('info');
-        info1.textContent = data.name;
-        var info2 = document.createElement('h4');
-        info2.classList.add('info');
-        info2.textContent = data.surname;
-        const btn = document.createElement("a");
-        btn.classList.add('btn_cards');
-        btn.innerHTML = "Ətraflı";
-        btn.href = "people_about.html";
-        btn.target = "_blank";
-        cardContent.appendChild(title);
-        cardContent.appendChild(info1);
-        cardContent.appendChild(info2);
-        cardContent.appendChild(btn);
-        card.appendChild(cardContent);
-        cardContainer.appendChild(card);
-        return card;
-      }
+    data.forEach((element) => {
+      createCard(element);
     });
-  })
+  });
+// eger data varsa localstorage
+window.onload = function () {
+  if (localStorage.getItem("basket") !== null) {
+    basket_arr = JSON.parse(localStorage.getItem("basket"));
+  }
+  if (localStorage.getItem("wishlist") !== null) {
+    wishlist_arr = JSON.parse(localStorage.getItem("wishlist"));
+  }
+};
 
 function createCard(data) {
-  var card = document.createElement('div');
-  card.classList.add('card');
-  return card;
-}
+  const div = document.createElement("div");
+  const name = document.createElement("h3");
+  const surname = document.createElement("h3");
+  const p = document.createElement("p");
+  const img = document.createElement("img");
+  const basket_btn = document.createElement("button");
+  const wishlist_btn = document.createElement("button");
 
-//wishlist
-const wishlistIcons = document.querySelectorAll('.wishlist');
-wishlistIcons.forEach(icon => {
-  icon.addEventListener('click', () => {
-    const card = icon.parentNode; // Tıklanan ikonun üst öğesini (kartı) al
-    const cardInfo = {
-      image: card.querySelector('img').src,
-      button: card.querySelector('button').innerText,
-      paragraph: card.querySelector('p').innerText
-    };
-    localStorage.setItem('selectedCard', JSON.stringify(cardInfo)); // Seçilen kartın bilgilerini yerel depolamaya kaydet
-    window.location.href = 'favorites.html'; // Yeni sayfaya yönlendir
-  });
-});
-//favo
-function addToWishlist(cardId) {
-  const selectedCard = {
-    image: document.querySelector(`.card:nth-child(${cardId}) img`).src,
-    button: document.querySelector(`.card:nth-child(${cardId}) button`).innerText,
-    paragraph: document.querySelector(`.card:nth-child(${cardId}) p`).innerText
+  div.classList.add("card_child");
+
+  name.innerText = data.name;
+  surname.innerText = data.surname;
+  p.innerText = data.title;
+  img.src = data.img;
+
+  basket_btn.innerHTML = `<i class="fa-solid fa-hand-holding-heart"></i>`;
+  wishlist_btn.innerHTML = `<i class="fa-solid fa-heart-circle-plus"></i>`;
+
+  if (wishlist_arr.find((x) => x.id == data.id) !== undefined) {
+    wishlist_btn.style.backgroundColor = "red";
+  }
+  // basket
+  basket_btn.onclick = function () {
+    //eger bu idli elemnent yoxdursa push et
+    if (basket_arr.find((x) => x.id == data.id) === undefined) {
+      basket_arr.push({ ...data, count: 1 });
+    }
+    localStorage.setItem("basket", JSON.stringify(basket_arr));
   };
+  // wishlist
 
-  const urlParams = new URLSearchParams();
-  urlParams.set('image', selectedCard.image);
-  urlParams.set('button', selectedCard.button);
-  urlParams.set('paragraph', selectedCard.paragraph);
-
-  const url = `favorites.html?${urlParams.toString()}`;
-  window.location.href = url;
+  wishlist_btn.onclick = () => {
+    if (wishlist_arr.find((x) => x.id == data.id) === undefined) {
+      wishlist_arr.push(data);
+      wishlist_btn.style.backgroundColor = "red";
+    } else {
+      wishlist_arr = wishlist_arr.filter((x) => x.id !== data.id);
+      wishlist_btn.style.backgroundColor = "white";
+    }
+    localStorage.setItem("wishlist", JSON.stringify(wishlist_arr));
+  };
+  div.append(name,surname, p,img, basket_btn, wishlist_btn);
+  carousel.appendChild(div);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const image = urlParams.get('image');
-  const button = urlParams.get('button');
-  const paragraph = urlParams.get('paragraph');
-
-  if (image && button && paragraph) {
-    const cardInfoHTML = `
-      <div class="card">
-        <img src="${image}" alt="Fotoğraf">
-        <button>${button}</button>
-        <p>${paragraph}</p>
-      </div>
-    `;
-    const wishlistInfoElement = document.getElementById('wishlist-info');
-    wishlistInfoElement.innerHTML = cardInfoHTML;
-  }
-});
-
-//carusel
-document.addEventListener("DOMContentLoaded", function() {
-  const carousel = document.querySelector(".carousel");
-  const cards = carousel.querySelectorAll(".card");
-  const prevBtn = carousel.querySelector(".prev");
-  const nextBtn = carousel.querySelector(".next");
-  let currentIndex = 0;
-
-  showCard(currentIndex);
-
-  prevBtn.addEventListener("click", function() {
-    currentIndex = (currentIndex === 0) ? cards.length - 1 : currentIndex - 1;
-    showCard(currentIndex);
-  });
-
-  nextBtn.addEventListener("click", function() {
-    currentIndex = (currentIndex === cards.length - 1) ? 0 : currentIndex + 1;
-    showCard(currentIndex);
-  });
-
-  function showCard(index) {
-    cards.forEach(function(card) {
-      card.classList.remove("active");
-    });
-
-    cards[index].classList.add("active");
-  }
-});
-
+//

@@ -1,6 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Montserrat:wght@600&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -35,8 +37,12 @@ nav .navBar {
   color: #234b55;
   z-index: 3;
 }
-nav .navBar label .logo_name {
+nav .navBar .logo_name {
   color: #234b55;
+  font-family: "Kanit", sans-serif;
+  padding-right: 150px;
+  font-size: 2.5rem;
+  text-shadow: gray;
 }
 nav .navBar img {
   width: 116px;
@@ -489,7 +495,7 @@ form .icon {
 
 @media screen and (min-width: 400px) and (max-width: 768px) {
   .section_one_abouts {
-    font-size: 4rem !important;
+    font-size: 2rem !important;
     padding-top: 50% !important;
   }
   .section_two_child .abouts div {
@@ -642,12 +648,57 @@ main .section_one_home .section_one_home_about {
   margin: 200px 200px;
   height: 500px;
 }
+.section_cards .cards-btn {
+  background-color: #234b55;
+  border-radius: 50px;
+  border: none;
+  width: 215px;
+  color: white;
+  padding: 17px 13px;
+  text-align: center;
+  font-size: 1px;
+  margin: 51px 450px;
+  cursor: pointer;
+}
+.section_cards .flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+.section_cards .flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.section_cards .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.section_cards .flip-card-front, .section_cards .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.section_cards .flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+.section_cards .flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
 .section_cards h1 {
   text-align: center;
   color: #234b55;
   font-weight: normal;
   font-size: 4rem;
-  margin-top: 5r;
 }
 .section_cards #cardContainer {
   display: flex;
@@ -704,6 +755,11 @@ main .section_one_home .section_one_home_about {
   display: block;
 }
 
+@media screen and (max-width: 768px) {
+  .section_cards h1 {
+    font-size: 2rem;
+  }
+}
 .section_cards_ABOUTS {
   margin-bottom: 100px;
 }
@@ -934,12 +990,6 @@ main .section_one_home .section_one_home_about {
   background: #3abc84;
 }
 
-.map iframe {
-  width: 100%;
-  height: 500px;
-  border-radius: 15px;
-}
-
 #help {
   height: 600px;
 }
@@ -1048,30 +1098,36 @@ h5 {
   overflow-x: auto;
   padding: 20px 0;
 }
-.carousel_cards .card {
+.carousel_cards .card_child {
   flex: 0 0 auto;
   width: 300px;
   margin-right: 20px;
   background-color: #f2f2f2;
   padding: 20px;
 }
-.carousel_cards .card img {
+.carousel_cards .card_child img {
   width: 100%;
   height: auto;
 }
-.carousel_cards .card button {
+.carousel_cards .card_child button {
   display: block;
   margin-top: 10px;
 }
-.carousel_cards .card p {
+.carousel_cards .card_child p {
   margin-top: 10px;
 }
-.carousel_cards .card i {
+.carousel_cards .card_child i {
   margin-top: 10px;
   cursor: pointer;
 }
 .carousel_cards .wishlist {
   color: red;
+}
+
+.map iframe {
+  width: 100%;
+  height: 500px;
+  border-radius: 15px;
 }
 
 .login_section h1 {
@@ -1473,6 +1529,18 @@ html {
   font-size: 1.3rem;
 }
 
+.peopleabout_btn {
+  background-color: rgb(57, 57, 134);
+  border-radius: 11px;
+  border: none;
+  width: 167px;
+  padding: 3px 14px;
+  text-align: center;
+  font-size: 16px;
+  margin: 10px 2px;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 400px) and (max-width: 768px) {
   .people_main {
     margin-left: 100px;
@@ -1581,4 +1649,143 @@ html {
   color: #234b55;
   cursor: pointer;
   margin-left: 40px;
+}
+
+#basket_container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#basket_container .card_basket {
+  width: 400px;
+  height: 300px;
+  background-color: rgb(81, 142, 217);
+  text-align: center;
+  padding-top: 50px;
+  color: white;
+}
+#basket_container .card_basket button {
+  background-color: white;
+  border-radius: 50px;
+  border: none;
+  width: 133px;
+  color: rgb(81, 142, 217);
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.basket_h1 {
+  color: rgb(81, 142, 217);
+  text-align: center;
+  font-size: 46px;
+}
+
+.basket_h2 {
+  color: white;
+}
+
+.btn_basket {
+  background-color: white;
+  border-radius: 50px;
+  border: none;
+  color: rgb(81, 142, 217);
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+#wishlist_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 100px;
+}
+#wishlist_container .card_wishlist {
+  width: 400px;
+  height: 300px;
+  background-color: rgb(81, 142, 217);
+  text-align: center;
+  padding-top: 50px;
+  color: white;
+}
+#wishlist_container button {
+  background-color: white;
+  border-radius: 50px;
+  border: none;
+  width: 133px;
+  color: rgb(81, 142, 217);
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.credit-card-form {
+  margin-top: 10%;
+  margin-left: 35%;
+  max-width: 500px;
+  padding: 1em;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(81, 114, 212, 0.1);
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(37, 148, 222);
+  text-align: center;
+  color: white;
+  align-content: center;
+}
+
+.credit-card-form h2 {
+  margin-bottom: 10%;
+  font-size: 24px;
+}
+
+.credit-card-form .form-group {
+  margin-bottom: 15px;
+}
+
+.credit-card-form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.credit-card-form input[type=text],
+.credit-card-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 1rem;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.credit-card-form .form-row {
+  display: flex;
+}
+
+.credit-card-form button[type=submit] {
+  width: 100%;
+  padding: 14px;
+  background-color: white;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(37, 148, 222);
+}
+
+.credit-card-form button[type=submit]:focus {
+  outline: none;
+  font-family: "Montserrat", sans-serif;
 }/*# sourceMappingURL=main.css.map */
