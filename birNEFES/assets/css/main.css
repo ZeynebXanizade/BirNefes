@@ -181,7 +181,7 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #28293E;
+  background: #234b55;
 }
 .container2 .section_Personal {
   width: 80%;
@@ -240,8 +240,11 @@ a {
 }
 
 .section_one_contact {
-  background-image: url(/assets/img/pexels-fauxels-3184418.jpg);
+  background-image: url(/assets/img/pexels-fauxels-3184418\ \(2\).jpg);
   height: 100vh;
+  background-repeat: no-repeat;
+  background-position: bottom -200px center;
+  background-size: cover;
 }
 .section_one_contact .section_one_contact_about {
   display: grid;
@@ -382,15 +385,24 @@ form .icon {
 }
 
 @media screen and (max-width: 768px) {
+  .section_one_contact {
+    height: 500px !important;
+    background-position: bottom -91px center !important;
+  }
   .section_one_contact_about {
+    top: 27% !important;
     left: 15% !important;
-    font-size: 3.2rem !important;
+    font-size: 2.2rem !important;
   }
 }
 @media only screen and (max-width: 479px) {
+  .section_one_contact {
+    height: 500px !important;
+    background-position: bottom -11px center !important;
+  }
   .section_one_contact_about {
     left: 15% !important;
-    font-size: 2.8rem !important;
+    font-size: 1.8rem !important;
   }
 }
 .section_one_about {
@@ -517,6 +529,9 @@ form .icon {
   .flip-card-section .flip-card-back p {
     font-size: 10px;
   }
+  .flip-card-section h1 {
+    font-size: 34px;
+  }
   .flip-card-front,
   .flip-card-back {
     width: 50% !important;
@@ -565,11 +580,14 @@ form .icon {
     margin-bottom: 40px;
   }
   .flip-card-section .flip-card-back {
-    padding-right: 210px;
+    padding-right: 210px !important;
     margin-top: 0 !important;
   }
   .flip-card-section .flip-card-back p {
     font-size: 10px;
+  }
+  .flip-card-section h1 {
+    font-size: 26px;
   }
   .flip-card-front,
   .flip-card-back {
@@ -603,16 +621,19 @@ form .icon {
   }
 }
 .section_one_blog {
-  background-image: url("/assets/img/pexels-picography-4458.jpg");
+  background-image: url("/assets/img/pexels-fauxels-3183150.jpg");
   height: 100vh;
+  background-repeat: no-repeat;
+  background-position: bottom -200px center;
+  background-size: cover;
 }
 .section_one_blog .section_one_blog_about {
   display: grid;
   place-items: center;
   padding-top: 200px;
-  text-shadow: 1px 2px rgb(11, 11, 97);
+  text-shadow: 1px 2px white;
   font-weight: bold;
-  color: white;
+  color: #234b55;
 }
 .section_one_blog .section_one_blog_about h1 {
   font-size: 11rem;
@@ -630,35 +651,44 @@ form .icon {
   padding-bottom: 80px;
   padding-right: 30px;
 }
-.latest-blog .latest-blog .section-title {
+
+.latest-blog .section-title {
   margin-bottom: 55px;
 }
-.latest-blog .single-latest-blog {
+
+.single-latest-blog {
   margin-bottom: 25px;
 }
-.latest-blog .single-latest-blog img {
+
+.single-latest-blog img {
   width: 500px;
 }
-.latest-blog .single-latest-blog .latest-text {
+
+.single-latest-blog .latest-text {
   padding-top: 25px;
 }
-.latest-blog .single-latest-blog .latest-text .tag-list {
+
+.single-latest-blog .latest-text .tag-list {
   margin-bottom: 8px;
 }
-.latest-blog .single-latest-blog .latest-text a {
+
+.single-latest-blog .latest-text a {
   display: block;
 }
-.latest-blog .single-latest-blog .latest-text a h4 {
+
+.single-latest-blog .latest-text a h4 {
   color: #252525;
   font-weight: 700;
   line-height: 30px;
   margin-bottom: 16px;
 }
-.latest-blog .benefit-items {
+
+.benefit-items {
   border: 1px solid #ebebeb;
   margin-top: 45px;
 }
-.latest-blog .benefit-items .single-benefit {
+
+.benefit-items .single-benefit {
   padding-top: 30px;
   padding-bottom: 25px;
   padding-left: 55px;
@@ -667,6 +697,10 @@ form .icon {
 }
 
 @media screen and (max-width: 768px) {
+  .section_one_blog {
+    height: 500px !important;
+    background-position: bottom -25px center !important;
+  }
   .section_one_blog_about h1 {
     font-size: 10rem !important;
   }
@@ -683,7 +717,7 @@ form .icon {
   }
 }
 main .section_one_home {
-  background-image: url("/assets/img/pexels-karolina-grabowska-4386467.jpg");
+  background-image: url("/assets/img/pexels-karolina-grabowska-4386467 (1).jpg");
   height: 100vh;
   background-repeat: no-repeat;
   background-position: bottom -700px center;
@@ -1241,9 +1275,14 @@ h5 {
   }
   .section_cards h1 {
     font-size: 2rem;
+    text-align: center;
   }
   .section_cards .cards-btn {
     margin: 51px 182px;
+  }
+  .section_cards .flip-card {
+    width: 240px;
+    height: 226px;
   }
   #help {
     margin-top: 349px;
@@ -1259,18 +1298,30 @@ h5 {
   .section_one_home .section_one_home_about {
     font-size: 1rem !important;
   }
+  .carousel_cards {
+    width: 364px;
+  }
   .section_cards {
     margin: 195px 18px;
   }
   .section_cards h1 {
-    font-size: 2rem;
+    font-size: 1rem;
+    text-align: center;
   }
   .section_cards .cards-btn {
     margin: 51px 84px;
   }
+  .section_cards .flip-card {
+    width: 240px;
+    height: 226px;
+  }
+  .flip-card-back {
+    padding-top: 20% !important;
+    padding-right: 69% !important;
+  }
   #help {
     margin-top: 349px;
-    width: 350px;
+    width: 290px;
   }
 }
 .login_section h1 {
@@ -1742,7 +1793,7 @@ html {
   }
 }
 .section_one_form {
-  background-image: url("/assets/img/pexels-karolina-grabowska-4021801.jpg");
+  background-image: url("/assets/img/pexels-karolina-grabowska-4021801 (1).jpg");
   height: 100vh;
   background-repeat: no-repeat;
   background-position: bottom -200px center;

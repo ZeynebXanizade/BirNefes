@@ -6,8 +6,11 @@
 }
 
 .section_one_contact {
-  background-image: url(/assets/img/pexels-fauxels-3184418.jpg);
+  background-image: url(/assets/img/pexels-fauxels-3184418\ \(2\).jpg);
   height: 100vh;
+  background-repeat: no-repeat;
+  background-position: bottom -200px center;
+  background-size: cover;
 
   .section_one_contact_about {
     display: grid;
@@ -171,12 +174,18 @@ form {
 //responsive tablet
 
 @media screen and (max-width: 768px) {
- 
+
+  .section_one_contact {
+
+    height: 500px !important;
+    background-position: bottom -91px center !important;
+
+  }
 
   .section_one_contact_about {
-
+    top: 27% !important;
     left: 15% !important;
-    font-size: 3.2rem !important;
+    font-size: 2.2rem !important;
 
 
   }
@@ -185,12 +194,21 @@ form {
 
 
 
+
+
 //responsive mobile
 @media only screen and (max-width: 479px) {
+  .section_one_contact {
+
+    height: 500px !important;
+    background-position: bottom -11px center !important;
+
+  }
+
   .section_one_contact_about {
 
     left: 15% !important;
-    font-size: 2.8rem !important;
+    font-size: 1.8rem !important;
 
   }
 
